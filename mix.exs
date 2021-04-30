@@ -1,8 +1,8 @@
 defmodule NervesSystemRpi4.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_rpi4
+  @github_organization "valiot"
+  @app :valiot_system_rpi4
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -90,6 +90,7 @@ defmodule NervesSystemRpi4.MixProject do
 
   defp package do
     [
+      maintainers: ["Aldebaran Alonso", "Valiot"],
       files: package_files(),
       licenses: ["Apache 2.0"],
       links: %{"GitHub" => @source_url}
