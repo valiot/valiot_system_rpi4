@@ -4,11 +4,9 @@
 #
 #############################################################
 
-CLOUDFLARED_VERSION 		:= 2021.4.0
-CLOUDFLARED_SOURCE 		:= cloudflared-linux-arm64
+CLOUDFLARED_VERSION 		:= 2021.10.3
+CLOUDFLARED_SOURCE 			:= cloudflared-linux-arm64
 CLOUDFLARED_SITE 			:= https://github.com/cloudflare/cloudflared/releases/download/$(CLOUDFLARED_VERSION)
-CLOUDFLARED_LICENSE 		:= CloudFlare
-CLOUDFLARED_LICENSE_FILES 	:= LICENSE
 
 #There is no tarball package, it is a raw binary
 define CLOUDFLARED_EXTRACT_CMDS
