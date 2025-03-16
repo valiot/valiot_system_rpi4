@@ -12,6 +12,89 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.29.1
+
+This is a security/bug fix update.
+
+* Changes
+  * Support hardware PWM
+  * Support the use of NVME SSDs
+
+* Updated dependencies
+  * [nerves_system_br v1.29.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.29.3)
+  * [Buildroot 2024.08.3](https://lore.kernel.org/buildroot/874j3e17ek.fsf@dell.be.48ers.dk/T/)
+  * [Erlang/OTP 27.2](https://erlang.org/download/OTP-27.2.README)
+  * Linux 6.6.64 with the Raspberry Pi and PREEMPT_RT patches
+  * [fwup v1.12.0](https://github.com/fwup-home/fwup/releases/tag/v1.12.0)
+
+## v1.29.0
+
+This is a major Erlang and Buildroot update.
+
+Please see the [nerves_system_br v1.29.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.29.0)
+for upgrade instructions if you've forked this system.
+
+* Changes
+  * Applied and enabled the Real-Time Linux patch set, PREEMPT_RT. Please see
+    write-ups on the web for benefits and how to use. The impact of this patch
+    shouldn't be noticeable to most Nerves users.
+  * Switch CPU frequency governor from conservative to the more modern
+    schedutil. See [LWN article](https://lwn.net/Articles/682391/) for details.
+  * Fix missing option for out-of-the-box QMI (cellular modem) support
+
+* Updated dependencies
+  * [nerves_system_br v1.29.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.29.1)
+  * [Buildroot 2024.08.2](https://lore.kernel.org/buildroot/871pzex7gn.fsf@dell.be.48ers.dk/T/)
+  * Linux 6.6.51 (Raspberry Pi stable_20241008 release)
+
+## v1.28.1
+
+This is a security/bug fix update.
+
+* Changes
+  * Enable QMI kernel modules to support many cellular modems without a Nerves
+    system update
+  * Reduce copy/pasted definitions in the `fwup.conf` by extracting them to
+    `fwup_include/fwup-common.conf`. (No functional changes)
+
+* Updated dependencies
+  * [nerves_system_br v1.28.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.3)
+  * [Buildroot 2024.05.2](https://lore.kernel.org/buildroot/87zfpfh147.fsf@dell.be.48ers.dk/T/)
+  * [Erlang/OTP 27.0.1](https://erlang.org/download/OTP-27.0.1.README)
+
+## v1.28.0
+
+This is a major Erlang and Buildroot update.
+
+Please see the [nerves_system_br v1.28.0 release notes](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.0)
+for upgrade instructions if you've forked this system.
+
+* Changes
+  * Elixir 1.17 and Erlang/OTP 27 support
+
+* Fixes
+  * The serial numbers returned by `Nerves.Runtime.serial_number/0` now contain
+    the whole serial number. If you forked this system, check the
+    `boardid.config` and `erlinit.config` for the changes and to keep the
+    hostname the same.
+
+* Updated dependencies
+  * Linux 6.6.31 (Raspberry Pi stable_20240529 release)
+  * [nerves_system_br v1.28.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.28.1)
+  * [Buildroot 2024.05](https://lore.kernel.org/buildroot/87bk46tjk2.fsf@dell.be.48ers.dk/T/)
+  * [Erlang/OTP 27.0](https://erlang.org/download/OTP-27.0.README)
+
+## v1.27.1
+
+This is a security/bug fix update.
+
+* Changes
+  * Enable the `wpa_supplicant` option for allow wired 802.1x authentication
+
+* Package updates
+  * [Erlang/OTP 26.2.5](https://erlang.org/download/OTP-26.2.5.README)
+  * [Buildroot 2024.02.1](https://lore.kernel.org/buildroot/87jzlp9u5e.fsf@48ers.dk/T/)
+
 ## v1.27.0
 
 This is a major Buildroot update.
