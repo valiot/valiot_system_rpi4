@@ -6,4 +6,3 @@
 # Load external packages
 source "$NERVES_DEFCONFIG_DIR/packages/frpc/Config.in"
 source "$NERVES_DEFCONFIG_DIR/packages/cloudflared-bin/Config.in"
-source "$NERVES_DEFCONFIG_DIR/packages/mosquitto-external/Config.in"
